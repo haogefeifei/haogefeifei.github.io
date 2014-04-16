@@ -1,6 +1,6 @@
-## 吕小荣的笔记
+## 博客
 
-这是我的博客，使用Jekyll + Markdown + Github Pages搭建，代码托管在Github。
+Jekyll + Markdown + Github Pages搭建，代码托管在Github。
 
 ## 作者简介
 
@@ -10,8 +10,7 @@ Ruby Programmer
 
 ## Follow me
 
-* [github](https://github.com/xiaoronglv) 
-* [Weibo](http://weibo.com/xiaoronglv/)
-* [Twitter](http://twitter.com/xiaoronglv/)
+* [github](https://github.com/haogefeifei) 
+* [Weibo](http://weibo.com/540744679/)
 
-Mail: xiaoronglv(at)gmail(dot)com
+Mail: haogefeifei@qq.com
