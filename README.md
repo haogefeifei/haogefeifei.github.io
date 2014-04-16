@@ -1,4 +1,4 @@
-## 博客
+## 博客(PS:未完善)
 
 Jekyll + Markdown + Github Pages搭建，代码托管在Github。
 
