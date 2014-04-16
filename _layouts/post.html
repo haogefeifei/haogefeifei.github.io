@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<article >
+  <div itemscope itemtype ="http://schema.org/Article">
+  <section class="title">
+    <h2>{{ page.title }} </h2>
+  </section>
+  <section class="meta">
+  <span class="time">
+    <time itemprop="datePublished" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
+  </span>
+  {% if page.tags %}
+  <span class="tags">
+    {% for tag in page.tags %}
+    <a href="/tags.html#{{ tag }}" title="{{ tag }}">#{{ tag }}</a>
+    {% endfor %}
+  </span>
+  {% endif %}
+  </section>
+  <section class="post">
+  {{ content }}
+  </section>
+  </div>
+</article>
+
+{% if page.previous or page.next %}
+<section id="page_nav">
+  {% if page.previous %}
+  <a href='{{page.previous.url}}'>← Previous</a>
+  {% endif %}
+  {% if page.next %}
+  <a href='{{page.next.url}}'>Next →</a>
+  {% endif %}
+</section>
+{% endif %}
