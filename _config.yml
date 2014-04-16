@@ -1,8 +1,8 @@
 markdown: rdiscount
 pygments: true
 permalink: /:title.html
-name: "吕小荣的笔记"
+name: "好个飞飞的菜园子"
 url: "http://http://haogefeifei.github.io/haogefeifei.github.io-master/"
-description: "医学互联网产品的点点滴滴"
+description: "GitHub博客"
 copyright: "Copyright 2012-2013, mednoter.com"
 markdown: rdiscount
