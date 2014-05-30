@@ -1,25 +1,28 @@
 ---
 layout: nil
+title : Atom Feed
 ---
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0"  xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>{{ site.name }}</title>
-		<description>{{ site.description }}</description>
-		<link>http://mednoter.com</link>
-		<language>zh-cn</language>
-		<copyright>{{ site.copyright }}</copyright>
-		<atom:link href="http://mednoter.com/atom.xml" rel="self" type="text/xml" />
-		{% for post in site.posts limit:10 %}
-		<item> 
-			<title>{{ post.title }}</title> 
-			<link>http://mednoter.com{{ post.url }}</link>
-			<guid isPermaLink="false">{{ post.guid }}</guid>
-			<description>{{ post.content | xml_escape }}</description> 
-			<category></category> 
-			<author>xiaoronglv@hotmail.com (Ryan Lü)</author> 
-			<pubDate>{{ post.date | date_to_rfc822 }}</pubDate> 
-		</item> 
-		{% endfor %}
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>{{ site.title }}</title>
+ <link href="{{ site.production_url }}/{{ site.atom_path }}" rel="self"/>
+ <link href="{{ site.production_url }}"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>{{ site.production_url }}</id>
+ <author>
+   <name>{{ site.author.name }}</name>
+   <email>{{ site.author.email }}</email>
+ </author>
+
+ {% for post in site.posts %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="{{ site.production_url }}{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>{{ site.production_url }}{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+ 
+</feed>

@@ -1,16 +1,13 @@
-## 博客(PS:未完善)
+## Storm的博客
 
-Jekyll + Markdown + Github Pages搭建，代码托管在Github。
+基于jekyll的个人博客站点[http://stormzhang.github.io/](http://stormzhang.github.io/)，主题风格本着"simple is beautiful"的原则。
 
-## 作者简介
+## 关于我
 
-前医生 
-Product Manager   
-Ruby Programmer  
+Android开发者 + Ruby语言爱好者 + Google脑残粉，爱技术， 爱开源， 爱设计， 爱赚钱。互联网中毒症患者，Want to make a good app!
 
-## Follow me
+## 联系我
 
-* [github](https://github.com/haogefeifei) 
-* [Weibo](http://weibo.com/540744679/)
+* Github: [https://github.com/stormzhang](https://github.com/stormzhang)
 
-Mail: haogefeifei@qq.com
+* Weibo: [http://weibo.com/stormzhang](http://weibo.com/zhangqi8)

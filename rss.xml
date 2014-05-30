@@ -1,23 +1,28 @@
 ---
 layout: nil
+title : RSS Feed
 ---
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"  xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>{{ site.name }}</title>
-		<description>医学互联网产品的点点滴滴</description>
-		<link>http://mednoter.com</link>
-		<language>zh-cn</language>
-		<atom:link href="http://mednoter.com/rss.xml" rel="self" type="application/rss+xml" />
-		{% for post in site.posts limit:10 %}
-			<item> 
-				<title>{{ post.title }}</title> 
-				<link>http://mednoter.com{{ post.url }}</link>
-				<guid isPermaLink="false">{{ post.guid }}</guid>
-				<description>{{ post.content | xml_escape }}</description> 
-				<author>xiaoronglv@hotmail.com (Ryan Lv)</author> 
-				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate> 
-			</item> 
-		{% endfor %}
-	</channel>
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>{{ site.title }}</title>
+        <description>{{ site.title }} - {{ site.author.name }}</description>
+        <link>{{ site.production_url }}{{ site.rss_path }}</link>
+        <link>{{ site.production_url }}</link>
+        <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
+        <pubDate>{{ site.time | date_to_xmlschema }}</pubDate>
+        <ttl>1800</ttl>
+
+{% for post in site.posts %}
+        <item>
+                <title>{{ post.title }}</title>
+                <description>{{ post.content | xml_escape }}</description>
+                <link>{{ site.production_url }}{{ post.url }}</link>
+                <guid>{{ site.production_url }}{{ post.id }}</guid>
+                <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+        </item>
+{% endfor %}
+
+</channel>
 </rss>
