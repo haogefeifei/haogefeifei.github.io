@@ -11,3 +11,13 @@ tags:
 2. Objective-C
 
 3. Ruby
+
+```python
+
+improt urllib2
+
+html urllib2.urlopen("http://www.baidu.com").read()
+
+print html
+
+```
