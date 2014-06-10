@@ -191,4 +191,56 @@ buildTypes{
 
 ## 更多
 
-实际项目中我们的app可以会很复杂，比如不仅引用到一些jar文件，也可能会引用一些Android Library项目以及一些.so文件，而且实际发布的时候我们可能不仅需要发布到一个平台上，目前Android大大小小可能得十几个平台，所以用Gradle就无法解决这些问题呢，答案是否定的，Gradle通过一些其他的配置都可以解决，只是稍微要麻烦些，等待以后有时间有精力的时候再总结下。顺便说下Gradle是Google大力支持的，所以和Android Studio类似，都是Android的未来，作为Android开发者有必要学习并跟上时代的步伐。
+buildscript{}
+{% highlight ruby %}
+Configures the build script classpath for this project. 设置脚本的运行环境
+{% endhighlight %}
+
+repositories{}
+{% highlight ruby %}
+Returns a handler to create repositories which are used for retrieving dependencies and uploading artifacts produced by the project. 
+大意就是支持java 依赖库管理（maven/ivy）,用于项目的依赖
+{% endhighlight %}
+
+dependencies{}
+{% highlight ruby %}
+The dependency handler of this project. The returned dependency handler instance can be used for adding new dependencies. For accessing already declared dependencies, the configurations can be used. 
+依赖包的定义。支持maven/ivy，远程，本地库，也支持单文件，如果前面定义了repositories{}maven 库，使用maven的依赖的时候只需要按照用类似于com.android.tools.build:gradle:0.4，gradle 就会自动的往远程库下载相应的依赖。
+{% endhighlight %}
+
+apply plugin:
+{% highlight ruby %}
+声明构建的项目类型，这里当然是android了。。。
+{% endhighlight %}
+
+android{}
+{% highlight ruby %}
+设置编译android项目的参数，接下来，我们的构建android项目的所有配置都在这里完成。
+{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
