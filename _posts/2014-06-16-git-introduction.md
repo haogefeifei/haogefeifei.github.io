@@ -1,6 +1,6 @@
 ---
 layout: post
-keywords: blog
+keywords: git
 description: blog
 title: "Git入门 - 1.Git介绍"
 categories: [Git]
